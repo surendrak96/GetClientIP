@@ -1,10 +1,8 @@
 
 <?php
-// this method doesnt work in localhost 
-
+ 
 function get_client_ip_env() {
-//get the client ip address using get_client_ip_env function
-    $ipaddress = '';
+     $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
         $ipaddress = getenv('HTTP_CLIENT_IP');
     else if(getenv('HTTP_X_FORWARDED_FOR'))
@@ -25,8 +23,7 @@ function get_client_ip_env() {
 
  
 function get_client_ip_server() {
-// get the client ip address using get_client_ip_server function)
-
+ 
     $ipaddress = '';
 
     if ($_SERVER['HTTP_CLIENT_IP'])
@@ -49,8 +46,7 @@ function get_client_ip_server() {
 echo 'Your IP address (using get_client_ip_server function) is ' . get_client_ip_server() . '<br />';
 
 
-// Get the client ip address $_SERVER['REMOTE_ADDR'] in single line 
-$ipaddress = $_SERVER['REMOTE_ADDR'];
+ $ipaddress = $_SERVER['REMOTE_ADDR'];
 echo 'Your IP address (using $_SERVER[\'REMOTE_ADDR\']) is ' . $ipaddress . '<br />';
 
 
