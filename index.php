@@ -1,6 +1,5 @@
 
 <?php
- 
 function get_client_ip_env() {
      $ipaddress = '';
     if (getenv('HTTP_CLIENT_IP'))
@@ -19,7 +18,8 @@ function get_client_ip_env() {
         $ipaddress = 'UNKNOWN';
     return $ipaddress;
 }
- echo 'Your IP address (using get_client_ip_env function) is ' . get_client_ip_env() . '<br />';
+ 
+echo 'Your IP address (using get_client_ip_env function) is ' . get_client_ip_env() . '<br/>';
 
  
 function get_client_ip_server() {
@@ -43,11 +43,12 @@ function get_client_ip_server() {
 
     return $ipaddress;
 }
+
 echo 'Your IP address (using get_client_ip_server function) is ' . get_client_ip_server() . '<br />';
 
 
- $ipaddress = $_SERVER['REMOTE_ADDR'];
-echo 'Your IP address (using $_SERVER[\'REMOTE_ADDR\']) is ' . $ipaddress . '<br />';
 
+$ipaddress = $_SERVER['REMOTE_ADDR'];
+echo 'Your IP address (using $_SERVER[\'REMOTE_ADDR\']) is ' . $ipaddress . '<br />';
 
 ?>
